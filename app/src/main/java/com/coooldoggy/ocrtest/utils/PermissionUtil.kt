@@ -17,6 +17,7 @@ val perms: Array<String> = arrayOf(
 val PERM_REQUEST_CODE_GOOGLE: Int = 1000
 val PERM_REQUEST_CODE_KAKAO: Int = 1001
 val PERM_REQUEST_CODE_GCP: Int = 1002
+val PERM_REQUEST_CODE_TESS: Int = 1003
 
 fun Context.getCheckPermission(perms: Array<String>): Boolean{
     perms.forEach {

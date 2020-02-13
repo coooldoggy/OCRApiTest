@@ -39,6 +39,15 @@
             android:layout_height="wrap_content">
         </Button>
 
+        <Button
+            android:id="@+id/btnTesseract"
+            android:text="Tess"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Button>
+
     </LinearLayout>
 
     <ScrollView
