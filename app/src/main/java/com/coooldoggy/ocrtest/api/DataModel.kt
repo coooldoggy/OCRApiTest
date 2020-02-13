@@ -7,5 +7,6 @@ import com.google.gson.annotations.SerializedName
 object DataModel {
     data class boxResult(@SerializedName("result") val result : boxes)
     data class boxes( @SerializedName("boxes") val boxes : JsonArray)
-    data class ocrResult(var result: JsonObject, var recognition_words: JsonArray)
+    data class ocrResult(@SerializedName("result") val result : recoWord)
+    data class recoWord(@SerializedName("recognition_words") val recognition_words : JsonArray)
 }
