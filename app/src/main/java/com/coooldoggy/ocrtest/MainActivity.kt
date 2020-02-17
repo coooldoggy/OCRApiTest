@@ -10,6 +10,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.coooldoggy.ocrtest.api.ApiManager
 import com.coooldoggy.ocrtest.utils.*
+import com.coooldoggy.ocrtest.utils.RealPathUtil.getRealPath
 import com.coooldoggy.ocrtest.utils.RealPathUtil.getRealPathFromURIAPI19
 import com.google.firebase.ml.vision.FirebaseVision
 import com.google.firebase.ml.vision.common.FirebaseVisionImage
@@ -142,7 +143,7 @@ class MainActivity : AppCompatActivity() {
                         showLoadingBar()
                     } else {
                         val dataString = data?.data!!
-                        val filpath = getRealPathFromURIAPI19(this, dataString)
+                        val filpath = getRealPath(this, dataString)
                         start()
                         googleAnalyze(filpath!!)
                         showLoadingBar()
@@ -155,7 +156,7 @@ class MainActivity : AppCompatActivity() {
                         showLoadingBar()
                     } else {
                         val dataString = data?.data!!
-                        val filpath = getRealPathFromURIAPI19(this, dataString)
+                        val filpath = getRealPath(this, dataString)
                         start()
                         kakaoAnalyzeBox(filpath!!)
                         showLoadingBar()
@@ -168,7 +169,7 @@ class MainActivity : AppCompatActivity() {
                         showLoadingBar()
                     } else {
                         val dataString = data?.data!!
-                        val filpath = getRealPathFromURIAPI19(this, dataString)
+                        val filpath = getRealPath(this, dataString)
                         start()
                         gcpAnalyze(filpath!!)
                     }
@@ -180,7 +181,7 @@ class MainActivity : AppCompatActivity() {
                         start()
                     } else {
                         val dataString = data?.data!!
-                        val filpath = getRealPathFromURIAPI19(this, dataString)
+                        val filpath = getRealPath(this, dataString)
                         showLoadingBar()
                         start()
                         tessAnalyze(filpath!!)
